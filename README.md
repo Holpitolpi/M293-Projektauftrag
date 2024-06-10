@@ -1,6 +1,6 @@
 
 # M293-Projektauftrag
-In Modul 293 müssen wir eine website mit css/Html erstellen welche später benotet wird in den folgenden Dateien sind für meine Website wikchtig.
+In Modul 293 müssen wir eine website mit css/Html erstellen welche später benotet wird.
 
 
 ## Was bei mir vorhanden ist
