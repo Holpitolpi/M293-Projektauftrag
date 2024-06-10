@@ -11,12 +11,17 @@ body {
     line-height: 1.6;
     color: #f4f4f4;
     background-color: #2E2E2E; /* Anthracite background color */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
 }
 
 header {
     background: #444444; /* Lighter grey for header */
     color: #fff;
     padding: 1rem 0;
+    width: 100%;
 }
 
 header nav {
@@ -53,6 +58,11 @@ header nav ul li a {
 
 section {
     padding: 2rem 0;
+    width: 100%;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #ueber-mich {
@@ -91,6 +101,12 @@ section {
 .content {
     position: relative;
     z-index: 2;
+    width: 90%;
+    max-width: 1200px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #image-section {
@@ -130,6 +146,7 @@ footer {
     color: #fff;
     text-align: center;
     padding: 1rem 0;
+    width: 100%;
     position: relative;
 }
 
@@ -204,7 +221,13 @@ footer nav .social-links li a img {
 
 #portfolio .content {
     z-index: 2;
-    width: 80%;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #portfolio .portfolio-grid {
@@ -382,6 +405,10 @@ footer nav .social-links li a img {
         position: static;
         margin-top: 1rem;
     }
+
+    #lehrlingsmesse-wattwil video {
+        width: 90%;
+    }
 }
 
 @media (max-width: 480px) {
@@ -403,5 +430,50 @@ footer nav .social-links li a img {
 
     footer nav ul li {
         margin: 0.25rem 0;
+    }
+
+    #lehrlingsmesse-wattwil video {
+        width: 100%;
+    }
+}
+
+/* Styles for the table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+@media (max-width: 768px) {
+    table {
+        font-size: 16px;
+    }
+    th, td {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    table {
+        font-size: 14px;
+    }
+    th, td {
+        padding: 8px;
     }
 }
