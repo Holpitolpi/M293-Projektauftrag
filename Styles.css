@@ -1,27 +1,26 @@
-/* Reset some default browser styles */
+/*
+Name: Jan Hollenstein
+Date: 2024.06.10
+Version: 2.16
+*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* General styles */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #f4f4f4;
-    background-color: #2E2E2E; /* Anthracite background color */
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
+    background-color: #2E2E2E; 
+    font-size: 1rem; 
 }
 
 header {
-    background: #444444; /* Lighter grey for header */
+    background: #444444;
     color: #fff;
     padding: 1rem 0;
-    width: 100%;
 }
 
 header nav {
@@ -58,11 +57,6 @@ header nav ul li a {
 
 section {
     padding: 2rem 0;
-    width: 100%;
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 #ueber-mich {
@@ -101,17 +95,11 @@ section {
 .content {
     position: relative;
     z-index: 2;
-    width: 90%;
-    max-width: 1200px;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #image-section {
     padding: 2rem 0;
-    background: #444444; /* Lighter grey background for sections */
+    background: #444444;
 }
 
 .container {
@@ -128,16 +116,16 @@ section {
     align-items: center;
     margin: 1rem;
     padding: 1rem;
-    background: #555555; /* Even lighter grey for cards */
+    background: #555555; 
     border-radius: 5px;
-    color: #f4f4f4; /* Light text color */
+    color: #f4f4f4; 
     flex: 1 1 calc(33.333% - 2rem);
 }
 
 .image-card img {
     width: 100%;
     height: auto;
-    border-radius: 5px; /* Optional: Add rounded corners */
+    border-radius: 5px; 
     margin-bottom: 1rem;
 }
 
@@ -146,7 +134,6 @@ footer {
     color: #fff;
     text-align: center;
     padding: 1rem 0;
-    width: 100%;
     position: relative;
 }
 
@@ -183,11 +170,10 @@ footer nav .social-links li a img {
     height: 30px;
 }
 
-/* Portfolio section */
 #portfolio {
     position: relative;
     padding: 2rem 0;
-    background: #8e8885; /* Background color for the entire block */
+    background: #8e8885; 
     color: #fff;
     text-align: center;
     display: flex;
@@ -221,13 +207,7 @@ footer nav .social-links li a img {
 
 #portfolio .content {
     z-index: 2;
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
 }
 
 #portfolio .portfolio-grid {
@@ -238,39 +218,25 @@ footer nav .social-links li a img {
 }
 
 #portfolio .portfolio-item {
-    background: #555555; /* Even lighter grey for portfolio items */
+    background: #555555; 
     margin: 1rem;
     padding: 1rem;
     text-align: center;
     border-radius: 5px;
-    color: #f4f4f4; /* Light text color */
+    color: #f4f4f4; 
     flex: 1 1 calc(33.333% - 2rem);
 }
 
 #portfolio .portfolio-item img {
     max-width: 100%;
     height: auto;
-    border-radius: 5px; /* Optional: Add rounded corners */
+    border-radius: 5px; 
     margin-bottom: 1rem;
 }
 
-.more-projects-btn {
-    display: block;
-    width: 200px;
-    margin: 2rem auto;
-    padding: 0.5rem 1rem;
-    background: #333333; /* Darker grey for buttons */
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-align: center;
-}
-
-/* Contact section */
 #kontakt {
     padding: 2rem 0;
-    background: #8e8885; /* Background color for the entire block */
+    background: #8e8885; 
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -346,7 +312,106 @@ footer nav .social-links li a img {
     }
 }
 
-/* Media Queries for Responsive Design */
+@media (max-width: 1024px) {
+    .image-card,
+    #portfolio .portfolio-item {
+        flex: 1 1 calc(50% - 2rem);
+    }
+}
+
+@media (max-width: 768px) {
+    header nav .menu-icon {
+        display: block;
+    }
+
+    header nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #444444;
+    }
+
+    header nav ul li {
+        text-align: center;
+        margin: 0;
+    }
+
+    header nav ul li a {
+        display: block;
+        padding: 1rem;
+        border-bottom: 1px solid #555555;
+    }
+
+    header nav input[type="checkbox"]:checked ~ ul {
+        display: flex;
+    }
+
+    .container,
+    #portfolio .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-card,
+    #portfolio .portfolio-item {
+        flex: 1 1 100%;
+        margin: 1rem 0;
+    }
+
+    footer nav ul {
+        flex-direction: column;
+    }
+
+    footer nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    footer nav .social-links {
+        position: static;
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container,
+    #portfolio .content {
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    .image-card,
+    #portfolio .portfolio-item {
+        margin: 1rem 0;
+        padding: 0.5rem;
+    }
+
+    header nav ul li a {
+        padding: 0.5rem;
+    }
+
+    footer nav ul li {
+        margin: 0.25rem 0;
+    }
+}
+
+#lehrlingsmesse-wattwil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+    background: #8e8885;
+    color: #fff;
+    text-align: center;
+}
+
+#lehrlingsmesse-wattwil video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 1rem 0;
+}
+
 @media (max-width: 1024px) {
     .image-card,
     #portfolio .portfolio-item {
@@ -437,43 +502,21 @@ footer nav .social-links li a img {
     }
 }
 
-/* Styles for the table */
 table {
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
-    font-size: 18px;
-    text-align: left;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
+    font-size: 1rem; /* Basis-Schriftgröße für die Tabelle */
+    text-align: center; 
+    border: 2px solid #000; 
 }
 
-th, td {
-    padding: 12px;
-    border: 1px solid #ddd;
+thead th {
+    font-weight: bold; 
+    border: 2px solid #000; 
+    padding: 0.625rem; /* Padding in em */
 }
-
-th {
-    background-color: #f4f4f4;
-}
-
-@media (max-width: 768px) {
-    table {
-        font-size: 16px;
-    }
-    th, td {
-        padding: 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    table {
-        font-size: 14px;
-    }
-    th, td {
-        padding: 8px;
-    }
+tbody td {
+    border: 2px solid #000; 
+    padding: 0.625rem; /* Padding in em */
 }
