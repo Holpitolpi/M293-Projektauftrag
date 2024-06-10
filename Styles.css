@@ -1,7 +1,9 @@
 /*
 Name: Jan Hollenstein
 Date: 2024.06.10
+Firma: AVM Inovations AG
 Version: 2.16
+
 */
 * {
     margin: 0;
@@ -506,7 +508,7 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
-    font-size: 1rem; /* Basis-Schriftgröße für die Tabelle */
+    font-size: 1rem; 
     text-align: center; 
     border: 2px solid #000; 
 }
@@ -514,9 +516,9 @@ table {
 thead th {
     font-weight: bold; 
     border: 2px solid #000; 
-    padding: 0.625rem; /* Padding in em */
+    padding: 0.625rem; 
 }
 tbody td {
     border: 2px solid #000; 
-    padding: 0.625rem; /* Padding in em */
+    padding: 0.625rem; 
 }
